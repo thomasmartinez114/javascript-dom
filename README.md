@@ -7,7 +7,7 @@ Lesson Topics:
 
 02 - Get Element by ID
 
-03 - Get Element by Class or Tag
+03 - Get Element by Class or Tag (Turn var into array)
 
 04 - The Query Selector
 
