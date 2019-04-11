@@ -3,6 +3,7 @@ All course files for the JavaScrip DOM Tutorials on The Net Ninja YouTube channe
 
 Lesson Topics:
 01 - Intro
+
 02 - Get Element by ID
 03 - Get Element by Class or Tag
 04 - The Query Selector
