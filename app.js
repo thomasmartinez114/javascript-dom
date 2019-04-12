@@ -1,11 +1,12 @@
-var titles = document.getElementsByClassName('title');
+const wmf = document.querySelector('#book-list li:nth-child(2) .name');
+// console.log(wmf);
 
-// console.log(Array.isArray(titles));
+var books = document.querySelector('#book-list li .name')
+// console.log(books);
 
-// // Line below will make 'titles' into an array
-// console.log(Array.isArray(Array.from(titles)));
+books = document.querySelectorAll('#book-list li .name')
+// console.log(books);
 
-// Make 'titles' into array
-Array.from(titles).forEach(function(item){
-    console.log(item);
-})
+Array.from(books).forEach(function(book){
+    console.log(book);
+});
