@@ -1,10 +1,21 @@
-const bookList = document.querySelector('#book-list');
+var btns = document.querySelectorAll('#book-list .delete');
 
-console.log('book-list next sibling is:', bookList.nextSibling);
-console.log('book-list next element sibling is:', bookList.nextElementSibling);
+// turn to array
+Array.from(btns).forEach(function(btn) {
+    btn.addEventListener('click', function(e) {
 
-console.log('book-list previous sibling is:', bookList.previousSibling);
-console.log('book-list previous element sibling is:', bookList.previousElementSibling);
+        // when hit delete button make it delete the li (parent) that the button is in
+        const li = e.target.parentElement;
+        li.parentNode.removeChild(li)
 
-// Add text to page
-bookList.previousElementSibling.querySelector('p').innerHTML += '<br />Too cool for everyone else!';
+
+    });
+});
+
+// Prevent from navigating to site after clicking link
+const link = document.querySelector('#page-banner a');
+
+link.addEventListener('click', function(e){
+    e.preventDefault();
+    console.log('navigation to ', e.target.textContent, ' was prevented');
+})
