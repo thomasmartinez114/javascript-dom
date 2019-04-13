@@ -1,6 +1,10 @@
 const bookList = document.querySelector('#book-list');
-// Show the parent elements of a element
-console.log('the parent node is:', bookList.parentNode);
-console.log('the parent element is:', bookList.parentElement.parentElement);
 
-console.log(bookList.children);
+console.log('book-list next sibling is:', bookList.nextSibling);
+console.log('book-list next element sibling is:', bookList.nextElementSibling);
+
+console.log('book-list previous sibling is:', bookList.previousSibling);
+console.log('book-list previous element sibling is:', bookList.previousElementSibling);
+
+// Add text to page
+bookList.previousElementSibling.querySelector('p').innerHTML += '<br />Too cool for everyone else!';
