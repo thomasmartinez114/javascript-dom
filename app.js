@@ -7,3 +7,13 @@ list.addEventListener('click', function(e){
        list.removeChild(li)
    } 
 });
+
+// add book-list
+    // listen for submit & prevent it from refreshing page when hitting submit
+const addForm = document.forms['add-book'];
+
+addForm.addEventListener('submit', function(e){
+   e.preventDefault();
+   const value = addForm.querySelector('input[type="text"]').value;
+   console.log(value);
+});
