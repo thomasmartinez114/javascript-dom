@@ -35,9 +35,19 @@ addForm.addEventListener('submit', function(e) {
     list.appendChild(li);
 });
 
-//      Attributes
+//      Attributes - video 14
 // 	• var.getAttribute('class')
 // 	• Var.setAttribute('class', 'name-2')
 // 	• Var.hasAttribute('class')
 // 	• Var.removeAttribute('class')
 
+// hide books
+const hideBox = document.querySelector('#hide');
+hideBox.addEventListener('change', function(e) {
+    if (hideBox.checked) {
+        list.style.display = 'none';
+    }
+    else {
+        list.style.display = 'initial';
+    }
+});
