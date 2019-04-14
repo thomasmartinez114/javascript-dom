@@ -51,3 +51,23 @@ hideBox.addEventListener('change', function(e) {
         list.style.display = 'initial';
     }
 });
+
+// filter books
+const searchBar = document.forms['search-books'].querySelector('input');
+searchBar.addEventListener('keyup', function(e){
+   
+    // convert the input text to lower case because matching is case-sensitive
+   const term = e.target.value.toLowerCase();
+   const books = list.getElementsByTagName('li');
+    // turn the above line to an array
+    Array.from(books).forEach(function(book){
+        // grab just the title of book
+        const title = book.firstElementChild.textContent;
+        // check if term is in the book
+        if(title.toLowerCase().indexOf(term) != -1){
+            book.style.display = 'block';
+        } else {
+            book.style.display = 'none';
+        }
+    })
+});
