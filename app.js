@@ -1,4 +1,7 @@
-const list = document.querySelector('#book-list ul');
+// wait until DOM is fully loaded before doing any of the work below
+// this will allow you to place the script in the head of HTML
+document.addEventListener('DOMContentLoaded', function(){
+    const list = document.querySelector('#book-list ul');
 
 // delete books through parent UL than applying it for each item which will take more resources
 list.addEventListener('click', function(e) {
@@ -88,3 +91,6 @@ tabs.addEventListener('click', function(e){
         })
     }
 })
+
+});
+
